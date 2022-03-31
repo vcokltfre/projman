@@ -1,0 +1,5 @@
+#!/bin/bash
+
+go build
+chmod +x projman
+mv projman ~/.go/bin/proj
