@@ -205,4 +205,7 @@ func (m *ProjectManager) Validate () {
 			m.Store.Del(project.Name)
 		}
 	}
+
+	b := utils.BuildColourText().Green().Add("Validated ").Blue().Add(fmt.Sprintf("%d", len(m.Store.List()))).Green().Add(" projects.")
+	fmt.Println(b.String())
 }
