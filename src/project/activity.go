@@ -27,7 +27,8 @@ func (p *Project) LastActive () time.Time {
 
 	head, err := repo.Head()
 	if err != nil {
-		panic(err)
+		p.lastActive = &time.Time{}
+		return *p.lastActive
 	}
 
 	commit, err := repo.CommitObject(head.Hash())
